@@ -1,0 +1,45 @@
+@import "../mixins/screens.scss";
+
+%h1-typography {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 48px;
+
+  @include onTablet {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+%h2-typography {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  
+  @include onTablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+%main-typography {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+
+  @include onTablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+%extra-typography {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+
+  @include onTablet {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
