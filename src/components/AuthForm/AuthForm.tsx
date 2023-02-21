@@ -8,7 +8,7 @@ import chuck from '../../images/chuck_norris.png';
 import './AuthForm.scss';
 
 export const AuthForm: React.FC = () => {
-  const [ , setUser ] = useStorage<User | null>(null, 'user');
+  const [ , setUser ] = useStorage<User | null>('user', null);
   const [ name, setName ] = useState('');
   const [ errorMessage, setErrorMessage ] = useState('');
 
@@ -29,8 +29,9 @@ export const AuthForm: React.FC = () => {
 
     if (!errorMessage.length) {
       setUser({ name });
-    } 
-  }, [errorMessage]);
+      setName('');
+    }
+  }, [errorMessage, name]);
 
   return (
     <form onSubmit={(e) => onFormSubmit(e)} className="auth_form">

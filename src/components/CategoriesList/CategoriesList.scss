@@ -1,0 +1,12 @@
+@import "../../styles/mixins/screens.scss";
+
+.categories_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  @include onTablet {
+    gap: 20px;
+  }
+}

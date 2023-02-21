@@ -1,0 +1,34 @@
+@import "../../styles/variables.scss";
+@import "../../styles/extends/helpers.scss";
+
+.header {
+  position: sticky;
+  left: 0px;
+  right: 0px;
+
+  width: 100%;
+  padding: 8px 0;
+
+  background-color: $c-secondary;
+
+  &__content {
+    @extend %container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  &__logout {
+    height: 30px;
+    width: 30px;
+    background: url("../../images/logout.svg") no-repeat center;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

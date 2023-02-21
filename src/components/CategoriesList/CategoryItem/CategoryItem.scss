@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/extends/typography.scss";
+@import "../../../styles/mixins/screens.scss";
+
+.category {
+  @extend %main-typography;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  padding: 10px 0;
+
+  border-radius: 20px;
+  background-color: #fff;
+  color: $c-typography-primary;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include onTablet {
+    width: 170px;
+    padding: 20px 0;
+  }
+
+  &:hover {
+    background-color: $c-secondary;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: $c-secondary;
+    color: #fff;
+  }
+
+  &--selected {
+    background-color: $c-secondary;
+    color: #fff;
+  }
+}

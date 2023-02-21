@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.loader {
+  position: relative;
+
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+
+  border: 5px dotted $c-primary;
+  border-radius: 50%;
+  
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

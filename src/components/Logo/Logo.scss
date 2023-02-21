@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__img {
+    height: 44px;
+    width: 44px;
+    object-fit: contain;
+  }
+
+  &__text {
+    color: $c-typography-secondary;
+  }
+}

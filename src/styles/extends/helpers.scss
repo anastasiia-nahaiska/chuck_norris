@@ -1,0 +1,14 @@
+@import "../mixins/screens.scss";
+
+%container {
+  max-width: 340px;
+  margin: 0 auto;
+
+  @include onTablet {
+    max-width: 600px;
+  }
+
+  @include onDesktop {
+    max-width: 1120px;
+  }
+}

@@ -1,13 +1,20 @@
 import React from 'react';
 
-import { AuthForm } from './components/AuthForm';
+// import { AuthForm } from './components/AuthForm';
 
 import './App.scss';
+import { CategoriesList } from './components/CategoriesList';
+import { Header } from './components/Header';
+// import { Loader } from './components/Loader';
+
 
 function App() {
   return (
     <div className="app">
-      <AuthForm />
+      <Header />
+      {/* <AuthForm /> */}
+      {/* <Loader /> */}
+      <CategoriesList />
     </div>
   );
 }
