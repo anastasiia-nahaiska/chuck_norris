@@ -1,14 +1,14 @@
 import { useCallback, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import { useStorage } from '../../hooks/useStorage';
-import { User } from '../../types/User';
 import chuck from '../../images/chuck_norris.png';
 
 import './AuthForm.scss';
+import { useUserContext } from '../../hooks/useUserContext';
+import { invalid_name_message } from '../../constants/messages';
 
 export const AuthForm: React.FC = () => {
-  const [ , setUser ] = useStorage<User | null>('user', null);
+  const { setUser } = useUserContext();
   const [ name, setName ] = useState('');
   const [ errorMessage, setErrorMessage ] = useState('');
 
@@ -16,9 +16,7 @@ export const AuthForm: React.FC = () => {
     if (/^[a-zA-Z ]+$/.test(name.trim())) {
       setErrorMessage('');
     } else {
-      setErrorMessage(
-        'Invalid name! Try again, and you may just earn my approval'
-      );
+      setErrorMessage(invalid_name_message);
     }
   }, [name]);
 

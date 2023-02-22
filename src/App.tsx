@@ -1,21 +1,29 @@
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 // import { AuthForm } from './components/AuthForm';
 
 import './App.scss';
-import { CategoriesList } from './components/CategoriesList';
+import { Categories } from './components/Categories';
 import { Header } from './components/Header';
-// import { Loader } from './components/Loader';
+import { Joke } from './components/Joke';
+import { UserContextProvider } from './context/UserContext';
 
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      {/* <AuthForm /> */}
-      {/* <Loader /> */}
-      <CategoriesList />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <UserContextProvider>
+        <div className="app">
+          <Header />
+          <Categories />
+          <Joke />
+          {/* <AuthForm /> */}
+
+        </div>
+      </UserContextProvider>
+    </QueryClientProvider>
   );
 }
 

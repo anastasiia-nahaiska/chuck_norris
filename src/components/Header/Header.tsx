@@ -1,13 +1,12 @@
 import React, { useCallback } from 'react';
-import { useStorage } from '../../hooks/useStorage';
-import { User } from '../../types/User';
 
+import { useUserContext } from '../../hooks/useUserContext';
 import { Logo } from '../Logo';
 
 import './Header.scss';
 
 export const Header: React.FC = () => {
-  const [ , setUser ] = useStorage<User | null>('user', null);
+  const { setUser } = useUserContext();
 
   const logoutHandler = useCallback(() => {
     setUser(null);
@@ -21,8 +20,8 @@ export const Header: React.FC = () => {
         </div>
       
         <button 
-          type="button" 
-          onClick={logoutHandler} 
+          type="button"
+          onClick={logoutHandler}
           className="header__logout"
         ></button>
       </div>

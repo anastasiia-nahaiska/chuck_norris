@@ -1,8 +1,5 @@
 @import "../../styles/extends/typography.scss";
-@import "../../styles/variables.scss";
 
 .error_message {
   @extend %main_typography;
-
-  color: $c-typography-primary;
 }

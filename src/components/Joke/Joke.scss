@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins/screens.scss";
+@import "../../styles/extends/typography.scss";
+@import "../../styles/extends/helpers.scss";
+
+.joke {
+  @extend %container;
+
+  position: relative;
+
+  width: 100%;
+  
+  &__board {
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    min-height: 114px;
+    padding: 24px;
+  
+    background-color: $c-secondary;
+    border-radius: 25px;
+    box-shadow: 0px 100px 80px rgba(80, 76, 103, 0.07),
+      0px 0px 12px rgba(80, 76, 103, 0.035);  
+  }
+  
+  &__text {
+    @extend %main-typography;
+    
+    color: $c-typography-secondary;
+  }
+
+  &__img {
+    position: absolute;
+    right: 24px;
+    top: -120px;
+
+    height: 200px;
+
+    object-fit: contain;
+
+    @include onTablet {
+      top: -152px;
+      
+      height: 258px;
+    }
+  }
+}

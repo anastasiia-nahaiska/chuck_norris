@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
+import { colors } from '../../constants/colors';
 
 import './Loader.scss';
 
@@ -7,12 +8,19 @@ type Props = {
   color?: string;
 };
 
-export const Loader: React.FC<Props> = ({ size = 48, color = '#e5e5e5' }) => {
-  const styles = {
+export const Loader: React.FC<Props> = ({ 
+  size = 48,
+  color = colors.secondary
+}) => {
+  const styles: CSSProperties = {
     width: `${size}px`,
     height: `${size}px`,
-    bordeColor: color,
+    borderColor: color,
   };
 
-  return <div style={styles} className="loader"></div>;
+  return (
+    <div className="loader">
+      <div style={styles} className="loader__spinner"></div>
+    </div>
+  );
 };
