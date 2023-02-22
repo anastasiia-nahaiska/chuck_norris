@@ -1,0 +1,23 @@
+
+@import "../../styles/variables.scss";
+@import "../../styles/extends/typography.scss";
+
+.primary_button {
+  @extend %main-typography;
+
+  font-family: inherit;
+  border-radius: 20px;
+  background-color: $c-secondary;
+  color: $c-typography-secondary;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

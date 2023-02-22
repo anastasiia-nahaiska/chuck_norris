@@ -1,29 +1,43 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
-// import { AuthForm } from './components/AuthForm';
+import { 
+  HashRouter as Router,
+  Route, 
+  Routes, 
+  Navigate,
+} from 'react-router-dom';
 
 import './App.scss';
-import { Categories } from './components/Categories';
-import { Header } from './components/Header';
-import { Joke } from './components/Joke';
-import { UserContextProvider } from './context/UserContext';
+
+import { useUserContext } from './hooks/useUserContext';
+import { Auth } from './pages/Auth';
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
 
 const queryClient = new QueryClient();
 
 function App() {
+  const {user} = useUserContext();
+
   return (
     <QueryClientProvider client={queryClient}>
-      <UserContextProvider>
-        <div className="app">
-          <Header />
-          <Categories />
-          <Joke />
-          {/* <AuthForm /> */}
+      <Router>
+        <Routes>
+          <Route 
+            path="/" 
+            element={user ? <Home /> : <Navigate to="auth" />} 
+          />
 
-        </div>
-      </UserContextProvider>
+          <Route 
+            path="auth" 
+            element={!user ? <Auth /> : <Navigate to="/" />}
+          />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </QueryClientProvider>
+   
   );
 }
 

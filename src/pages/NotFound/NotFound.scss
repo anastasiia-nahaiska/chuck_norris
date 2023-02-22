@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins/screens.scss";
+@import "../../styles/extends/helpers.scss";
+@import "../../styles/extends/typography.scss";
+
+.not_found {
+  width: 100%;
+
+  background-color: $c-primary;
+
+  &__content {
+    @extend %container;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    min-height: 100vh;
+
+    text-align: center;
+
+    background: url("../../images/chuck_norris.png") no-repeat bottom right;
+
+    @include onTablet {
+      width: 50%;
+    }
+  }
+
+  &__message {
+    width: 100%;
+
+    @include onTablet {
+      width: 75%;
+    }
+  }
+
+  &__button {
+    padding: 20px 0;
+    width: 200px; 
+  }
+}

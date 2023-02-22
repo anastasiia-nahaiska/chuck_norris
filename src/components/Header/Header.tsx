@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useUserContext } from '../../hooks/useUserContext';
 import { Logo } from '../Logo';
@@ -7,9 +8,11 @@ import './Header.scss';
 
 export const Header: React.FC = () => {
   const { setUser } = useUserContext();
+  const navigate= useNavigate();
 
   const logoutHandler = useCallback(() => {
     setUser(null);
+    navigate('auth');
   },[]);
 
   return (

@@ -7,5 +7,9 @@ export const default_joke_message = 'choose your category and get ready for '
   + 'a joke that\'s going to pack a punch. '
   + 'But remember, when Chuck Norris tells a joke, even the universe listens.';
 
-export const invalid_name_message = 'Invalid name!' 
+export const invalid_name_message = 'Invalid name! ' 
   + 'Try again, and you may just earn my approval';
+
+export const page_not_found_message = 'Page not found! That\'s just the '
+  + 'universe underestimating Chuck Norris. Don\t worry, mortal, I help you '
+  + 'get back on track.';

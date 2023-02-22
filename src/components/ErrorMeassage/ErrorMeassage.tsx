@@ -5,17 +5,19 @@ type Props = {
   message: string;
   size?: number;
   color?: string;
+  className?: string;
 };
 
 export const ErrorMeassage: React.FC<Props> = ({ 
   message,
   size = 16,
   color = colors.typographyPrimary,
+  className = '',
 }) => (
-  <div
-    style={{ fontSize: size, color }}
-    className="error_message"
+  <p
+    style={{ fontSize: size, color}}
+    className={`error_message ${className}`}
   >
     {message}
-  </div>
+  </p>
 );

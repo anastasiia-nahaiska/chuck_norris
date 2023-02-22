@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins/screens.scss";
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: $c-primary;
+}

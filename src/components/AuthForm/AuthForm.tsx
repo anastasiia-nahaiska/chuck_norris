@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { useNavigate } from 'react-router-dom';
 
 import chuck from '../../images/chuck_norris.png';
 
@@ -11,6 +12,7 @@ export const AuthForm: React.FC = () => {
   const { setUser } = useUserContext();
   const [ name, setName ] = useState('');
   const [ errorMessage, setErrorMessage ] = useState('');
+  const navigate= useNavigate();
 
   const validateName = useCallback(() => {
     if (/^[a-zA-Z ]+$/.test(name.trim())) {
@@ -28,8 +30,10 @@ export const AuthForm: React.FC = () => {
     if (!errorMessage.length) {
       setUser({ name });
       setName('');
+      navigate('/');
     }
   }, [errorMessage, name]);
+
 
   return (
     <form onSubmit={(e) => onFormSubmit(e)} className="auth_form">
