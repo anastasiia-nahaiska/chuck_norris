@@ -7,11 +7,12 @@ import { Logo } from '../Logo';
 import './Header.scss';
 
 export const Header: React.FC = () => {
-  const { setUser } = useUserContext();
+  const { setUser, setSelectedCategory } = useUserContext();
   const navigate= useNavigate();
 
   const logoutHandler = useCallback(() => {
     setUser(null);
+    setSelectedCategory('');
     navigate('auth');
   },[]);
 

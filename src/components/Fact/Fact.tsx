@@ -26,7 +26,7 @@ export const Fact: React.FC = () => {
     if (selectedCategory.length > 0) {
       refetch();
     }
-    
+
   }, [selectedCategory]);
 
   return (

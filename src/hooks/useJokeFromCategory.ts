@@ -7,6 +7,7 @@ export const useJokeFromCategory = (category: string) => {
     () => getJokeFromCategory(category),
     {
       enabled: false,
+      cacheTime: 0,
     }
   );
 };
