@@ -11,9 +11,9 @@ import chuck from '../../images/chuck_norris.png';
 import { ErrorMeassage } from '../ErrorMeassage';
 import { Loader } from '../Loader';
 
-import './Joke.scss';
+import './Fact.scss';
 
-export const Joke: React.FC = () => {
+export const Fact: React.FC = () => {
   const { user, selectedCategory } = useUserContext();
   const {
     isLoading,
