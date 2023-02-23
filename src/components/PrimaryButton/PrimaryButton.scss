@@ -5,6 +5,8 @@
 .primary_button {
   @extend %main-typography;
 
+  padding: 15px 0;
+
   font-family: inherit;
   border-radius: 20px;
   background-color: $c-secondary;

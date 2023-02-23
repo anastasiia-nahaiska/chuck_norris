@@ -1,4 +1,4 @@
-export const greeting_message = 'Hi, there! I am Chuck Norris !'
+export const greeting_message = 'Hi, there! I am Chuck Norris! '
   + 'What should I call you?';
 
 export const request_error_message = 'Something went wrong. '

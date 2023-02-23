@@ -100,31 +100,10 @@
   }
 
   &__submit {
-    @extend %main-typography;
-
     width: 100%;
-    padding: 15px 0;
-
-    font-family: inherit;
-
-    border-radius: 20px;
-    background-color: $c-secondary;
-    color: $c-typography-secondary;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
-
-    &:active {
-      opacity: 0.8;
-    }
 
     @include onTablet {
       width: 50%;
-
     }
   }
 

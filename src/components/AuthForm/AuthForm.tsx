@@ -10,6 +10,7 @@ import {
   greeting_message,
   invalid_name_message 
 } from '../../constants/messages';
+import { PrimaryButton } from '../PrimaryButton';
 
 export const AuthForm: React.FC = () => {
   const { setUser } = useUserContext();
@@ -64,7 +65,11 @@ export const AuthForm: React.FC = () => {
           </CSSTransition>
         </label>
         
-        <button type="submit" className="auth_form__submit">Go</button>
+        <PrimaryButton 
+          type="submit" 
+          className="auth_form__submit" 
+          text="Go" 
+        />
       </div>
       
       <img src={chuck} alt="chuck norris" className="auth_form__img"/>
