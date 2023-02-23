@@ -6,7 +6,10 @@ import chuck from '../../images/chuck_norris.png';
 
 import './AuthForm.scss';
 import { useUserContext } from '../../hooks/useUserContext';
-import { invalid_name_message } from '../../constants/messages';
+import { 
+  greeting_message,
+  invalid_name_message 
+} from '../../constants/messages';
 
 export const AuthForm: React.FC = () => {
   const { setUser } = useUserContext();
@@ -15,7 +18,7 @@ export const AuthForm: React.FC = () => {
   const navigate= useNavigate();
 
   const validateName = useCallback(() => {
-    if (/^[a-zA-Z ]+$/.test(name.trim())) {
+    if (/^[A-Za-z\u0400-\u04FF\s]{1,32}$/u.test(name.trim())) {
       setErrorMessage('');
     } else {
       setErrorMessage(invalid_name_message);
@@ -39,7 +42,7 @@ export const AuthForm: React.FC = () => {
     <form onSubmit={(e) => onFormSubmit(e)} className="auth_form">
       <div className="auth_form__main_content">
         <label htmlFor="name" className="auth_form__field">
-            Hi, there! I am Chuck Norris! What should I call you?
+          {greeting_message}
       
           <input 
             id="name" 
