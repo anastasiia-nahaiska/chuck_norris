@@ -10,6 +10,15 @@
   overflow-wrap: break-word;
 
   width: 100%;
+  margin-bottom: 30px;
+
+  @include onTablet {
+    margin-bottom: 60px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 144px;
+  }
   
   &__board {
     position: relative;

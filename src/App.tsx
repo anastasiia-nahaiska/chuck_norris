@@ -7,8 +7,6 @@ import {
   Navigate,
 } from 'react-router-dom';
 
-import './App.scss';
-
 import { useUserContext } from './hooks/useUserContext';
 import { Auth } from './pages/Auth';
 import { Home } from './pages/Home';
