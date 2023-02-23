@@ -3,14 +3,14 @@ import { CSSTransition } from 'react-transition-group';
 import { useNavigate } from 'react-router-dom';
 
 import chuck from '../../images/chuck_norris.png';
-
-import './AuthForm.scss';
 import { useUserContext } from '../../hooks/useUserContext';
 import { 
   greeting_message,
   invalid_name_message 
 } from '../../constants/messages';
 import { PrimaryButton } from '../PrimaryButton';
+
+import './AuthForm.scss';
 
 export const AuthForm: React.FC = () => {
   const { setUser } = useUserContext();

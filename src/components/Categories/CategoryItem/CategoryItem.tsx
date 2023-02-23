@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 import React from 'react';
 
 import { useUserContext } from '../../../hooks/useUserContext';
@@ -17,7 +17,7 @@ export const CategoryItem: React.FC<Props> = ({ category }) => {
       <button 
         type="button"
         onClick={() => setSelectedCategory(category)}
-        className={classNames(
+        className={cn(
           'category',
           { 'category--selected': selectedCategory === category }
         )}

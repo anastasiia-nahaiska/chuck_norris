@@ -18,7 +18,7 @@ export const Fact: React.FC = () => {
   const {
     isLoading,
     error,
-    data,
+    data: fact,
     refetch
   } = useJokeFromCategory(selectedCategory);
 
@@ -36,7 +36,7 @@ export const Fact: React.FC = () => {
           { isLoading && <Loader color={colors.primary} size={40} />}
         
           {!isLoading && !error && (
-            <p className="joke__text">{data?.value || `${user?.name}, ${default_joke_message}`}</p>
+            <p className="joke__text">{fact?.value || `${user?.name}, ${default_joke_message}`}</p>
           )}
 
           {!isLoading && error &&(

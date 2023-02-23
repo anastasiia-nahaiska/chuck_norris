@@ -1,12 +1,9 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins/screens.scss";
+@import "../../styles/extends/helpers.scss";
 
 .auth {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  @extend %flex-center; 
 
-  background-color: $c-primary;
+  min-height: 100vh;
 }

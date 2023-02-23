@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { CategoryItem } from '../CategoryItem';
+import { Category } from '../../../types/Category';
 
 import './CategoriesList.scss';
-import { Category } from '../../../types/Category';
 
 type Props = {
   categories: Category[];

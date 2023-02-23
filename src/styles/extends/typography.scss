@@ -1,6 +1,6 @@
 @import "../mixins/screens.scss";
 
-%h1-typography {
+%h2-typography {
   font-size: 32px;
   font-weight: 800;
   line-height: 48px;
@@ -11,7 +11,7 @@
   }
 }
 
-%h2-typography {
+%large-typography {
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;

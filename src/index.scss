@@ -1,3 +1,6 @@
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -6,4 +9,12 @@ html {
   font-family: "Raleway", "sans-serif";
 }
 
-@import "./styles/reset.scss";
+body {
+  padding: 
+    env(safe-area-inset-top) 
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+    
+  background-color:$c-primary;
+}

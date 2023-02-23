@@ -1,19 +1,19 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/extends/typography.scss";
+@import "../../../styles/extends/helpers.scss";
 @import "../../../styles/mixins/screens.scss";
 
 .category {
   @extend %main-typography;
+  @extend %flex-center;
 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
   width: 100px;
   padding: 10px 0;
 
+  color: $c-typography-primary;
+
   border-radius: 20px;
   background-color: #fff;
-  color: $c-typography-primary;
 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -24,17 +24,17 @@
   }
 
   &:hover {
-    background-color: $c-secondary;
     color: #fff;
+    background-color: $c-secondary;
   }
 
   &:active {
-    background-color: $c-secondary;
     color: #fff;
+    background-color: $c-secondary;
   }
 
   &--selected {
-    background-color: $c-secondary;
     color: #fff;
+    background-color: $c-secondary;
   }
 }
